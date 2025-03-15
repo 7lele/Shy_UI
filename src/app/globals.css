@@ -193,3 +193,10 @@ html, body {
   background-image: repeating-linear-gradient(-45deg, var(--primary), var(--primary) 13px, var(--muted-foreground) 13px, var(--muted-foreground) 14px);
   background-size: 40px 40px;
 }
+.tab-content {
+  --tabcontent-margin: calc(-1* var(--border)) 0 0 0;
+  --tabcontent-radius-ss: 0;
+  --tabcontent-radius-se: 34px;
+  --tabcontent-radius-es: 34px;
+  --tabcontent-radius-ee: 34px;
+}
