@@ -1,7 +1,19 @@
+"use client"
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
+import {useState} from "react";
+import {Copy} from "lucide-react";
 
 function page(){
+
+    const [copied, setCopied] = useState(false);
+
+    const handleCopy = () => {
+        navigator.clipboard.writeText('npm install lucide-react');
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+    };
+
     return(
     <>
         <Header/>
@@ -24,6 +36,17 @@ function page(){
                     <p className="mt-2">
                         Browse through various components, easily copy the code, and start building stunning interfaces with ease. Whether you're a seasoned developer or just starting out, Shy UI has you covered.
                     </p>
+                    <p className="mt-6 font-semibold">Be sure to use Lucide React:</p>
+                    <div className="flex items-center mt-2 bg-gray-800 text-slate-200 p-2 rounded-md">
+                        <code className="flex-1">npm install lucide-react</code>
+                        <button
+                            className="ml-2 p-1 bg-slate-700 hover:bg-slate-600 rounded-md"
+                            onClick={handleCopy}
+                        >
+                            <Copy size={18} />
+                        </button>
+                    </div>
+                    {copied && <p className="text-green-400 mt-2">Code copied to clipboard!</p>}
                 </div>
             </div>
         </main>
