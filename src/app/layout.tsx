@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       siteName: "Shy UI",
       images: [
         {
-          url: "https://shy-ui.vercel.app/og.png",
+          url: "https://shy-ui.vercel.app/favicon.ico",
           width: 800,
           height: 600,
       }]
